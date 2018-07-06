@@ -13,6 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Main job Controller, entry point of Spring Batch
+ * This triggers the Job Launcher to execute all the jobs 
+ * 
+ * @author abharsa
+ *
+ */
+
 @RestController
 @RequestMapping("/load")
 public class LoadController {
@@ -25,7 +33,6 @@ public class LoadController {
 
     @GetMapping
     public BatchStatus load() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
-
 
         Map<String, JobParameter> maps = new HashMap<>();
         maps.put("time", new JobParameter(System.currentTimeMillis()));

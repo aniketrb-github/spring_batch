@@ -4,6 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
 
+/**
+ * assume this class is the class which placed on the Connect Server side.
+ * We Hit Connect V4 API via Postman/JobManager Application, where the connect server sends us data after mapping it to their some XYZ class like "User.java" & it comes to us.
+ * & after understanding the response we create UserDTO.java at our end in JobManager project to map that JSON response & save it in DB  
+ * 
+ * @author abharsa
+ */
 @Entity
 public class User {
 
